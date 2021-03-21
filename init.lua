@@ -1,3 +1,6 @@
+-- Licensed under the Academic Free License version 3.0
+-- See license.txt for more details on terms of use
+
 local RunService = game:GetService('RunService');
 
 local Connection = { };
