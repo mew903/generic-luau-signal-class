@@ -26,8 +26,8 @@ function Signal.Dispose(self)
 end;
 
 function Signal.Fire(self, ...)
-	for index = 1, #self do
-		coroutine.resume(coroutine.create(self[index]), ...);
+	for _, connection in next, self do
+		coroutine.resume(coroutine.create(connection), ...);
 	end;
 	
 	self._lastFire = os.clock();
